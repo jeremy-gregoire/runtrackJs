@@ -8,42 +8,29 @@
 // }
 
 function tri(tableau, order = 'asc') {
-  let gauche = [];
-  let droite = [];
+  let sorties = tableau;
+  let taille = sorties.length;
 
-  switch (order) {
-    case 'asc':
-      var pivot = tableau[0];
+  for (let i = 0; i < taille; i++) {
+    for (let j = 0; j < taille - i - 1; j++) {
+      let sensEchangement =
+        order === 'asc'
+          ? tableau[j] > tableau[j + 1]
+          : tableau[j] < tableau[j + 1];
 
-      for (let i = 0; i < tableau.length; i++) {
-        let valeur = tableau[i];
-
-        if (valeur < pivot) {
-          gauche.push(valeur);
-        } else {
-          droite.push(valeur);
-        }
+      if (sensEchangement) {
+        let tmp = sorties[j];
+        sorties[j] = sorties[j + 1];
+        sorties[j + 1] = tmp;
       }
-
-      return [].concat(gauche).concat(droite);
-    case 'desc':
-      var pivot = tableau[tableau.length - 1];
-
-      for (let i = 0; i < tableau.length; i++) {
-        let valeur = tableau[i];
-
-        if (valeur < pivot) {
-          gauche.push(valeur);
-        } else {
-          droite.push(valeur);
-        }
-      }
-
-      return [].concat(gauche).concat(droite);
+    }
   }
+
+  return sorties;
 }
 
 let entrees = [7, 4, 9, 15, 3, 6];
 
 console.log(entrees);
-console.log(tri(entrees, 'asc'));
+console.log(tri(entrees));
+console.log(tri(entrees, 'desc'));
