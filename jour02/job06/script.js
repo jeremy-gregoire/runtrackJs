@@ -23,6 +23,7 @@ if (elemBtnSubmit) {
     }
 
     elemWrapper.classList.add('wrapper');
+    elemTxtCode.value = '';
   });
 } else {
   console.error("'elemBtnSubmit' est à NULL !");
