@@ -1,0 +1,72 @@
+.wrapper *,
+.wrapper *::before,
+.wrapper *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper,
+.wrapper .code-form {
+  display: flex;
+}
+
+.wrapper {
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+}
+
+.wrapper .code-form {
+  width: 90%;
+  max-width: 520px;
+  flex-direction: column;
+  background-color: hsl(218, 100%, 50%);
+  color: hsl(0, 0%, 100%);
+  padding: 3em;
+  box-shadow: 0 0 10px 2px hsla(218, 100%, 50%, 50%);
+  gap: 0.5rem;
+}
+
+.wrapper .code-form__label,
+.wrapper .code-form__input-text,
+.wrapper .code-form__input-submit {
+  font-size: 1.2rem;
+}
+
+.wrapper .code-form__label {
+  padding: 0.2rem 0.15rem;
+  border-bottom: 2px solid white;
+}
+
+.wrapper .code-form__input-text,
+.wrapper .code-form__input-submit {
+  color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(0, 0%, 100%);
+  background: transparent;
+}
+
+.code-form__input-text {
+  padding: 0.25rem;
+}
+
+.wrapper .code-form__input-text:focus,
+.wrapper .code-form__input-submit:focus {
+  outline-width: 2px;
+  outline-color: orange;
+  outline-style: solid;
+  outline-offset: 2px;
+}
+
+.wrapper .code-form__input-submit {
+  width: fit-content;
+  padding: 0.75rem;
+  transition: 250ms;
+}
+
+.wrapper .code-form__input-submit:hover,
+.wrapper .code-form__input-submit:focus {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+}
