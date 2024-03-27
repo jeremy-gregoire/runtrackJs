@@ -57,27 +57,44 @@ function createMixedArray(array) {
 
 $(document).ready(() => {
   const IMAGES = [
-    { fileName: 'arc1', alt: "La première pièce de l'arc-en-ciel" },
-    { fileName: 'arc2', alt: "La deuxième pièce de l'arc-en-ciel" },
-    { fileName: 'arc3', alt: "La troisième pièce de l'arc-en-ciel" },
-    { fileName: 'arc4', alt: "La quatrième pièce de l'arc-en-ciel" },
-    { fileName: 'arc5', alt: "La cinquième pièce de l'arc-en-ciel" },
-    { fileName: 'arc6', alt: "La sixième pièce de l'arc-en-ciel" },
+    { src: 'images/arc1.png', alt: "La première pièce de l'arc-en-ciel" },
+    { src: 'images/arc2.png', alt: "La deuxième pièce de l'arc-en-ciel" },
+    { src: 'images/arc3.png', alt: "La troisième pièce de l'arc-en-ciel" },
+    { src: 'images/arc4.png', alt: "La quatrième pièce de l'arc-en-ciel" },
+    { src: 'images/arc5.png', alt: "La cinquième pièce de l'arc-en-ciel" },
+    { src: 'images/arc6.png', alt: "La sixième pièce de l'arc-en-ciel" },
   ];
+  let alreadyMixed = false;
 
   IMAGES.forEach((image) => {
     $('#spawner').append(
-      `<li class="draggable"><img class="arc-image" src="images/${image.fileName}.png" alt="${image.alt}" /></li>`
+      `<li class="draggable"><img class="arc-image" src="${image.src}" alt="${image.alt}" /></li>`
     );
   });
 
   $('#sortable').sortable({
     revert: true,
   });
+
   $('.draggable').draggable({
     connectToSortable: '#sortable',
     revert: 'invalid',
   });
 
-  $('ul.draggable, li').disableSelection();
+  $('ul, li').disableSelection();
+
+  $('#btnMixImages').click(() => {
+    if (alreadyMixed) {
+      return;
+    }
+
+    let randomSets = createMixedArray(IMAGES);
+
+    $('.arc-image').each((i, v) => {
+      v.src = randomSets[i].src;
+      v.alt = randomSets[i].alt;
+    });
+
+    alreadyMixed = true;
+  });
 });
