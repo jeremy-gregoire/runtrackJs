@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.list-item {
+  display: flex;
+  gap: 0.25rem;
+  min-height: 133px;
+  border: 1px solid black;
+  list-style: none;
+}
