@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <title>Runtrack JS - Jour 05 - Job 01</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- JAVASCRIPT -->
+    <script src="inscription.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="navbar__list-item">
+          <li class="navbar__item item--brand">
+            <h1 class="navbar__brand">Jour 05 - Job 01</h1>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./connexion.html">Se connecter</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./inscription.html">S'inscrire</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form class="app-form form--grid" id="formRegister" method="post">
+        <div class="form__fields" id="fieldLastname">
+          <label class="form__label" for="txtLastname">Nom de famille *</label>
+          <input class="form__input" type="text" id="txtLastname" />
+          <div class="errors"></div>
+        </div>
+        <div class="form__fields" id="fieldFirstname">
+          <label class="form__label" for="txtFirstname">Prénom *</label>
+          <input class="form__input" type="text" id="txtFirstname" />
+          <div class="errors"></div>
+        </div>
+        <div class="form__fields" id="fieldAddress">
+          <label class="form__label" for="txtAddress">Adresse *</label>
+          <input class="form__input" type="text" id="txtAddress" />
+          <div class="errors"></div>
+        </div>
+        <div class="form__fields" id="fieldZipCode">
+          <label class="form__label" for="txtZipCode">Code postal *</label>
+          <input class="form__input" type="text" id="txtZipCode" />
+          <div class="errors"></div>
+        </div>
+        <div class="form__fields" id="fieldEmail">
+          <label class="form__label" for="txtEmail">Email *</label>
+          <input class="form__input" type="email" id="txtEmail" />
+          <div class="errors"></div>
+        </div>
+        <div class="form__fields" id="fieldPassword">
+          <label class="form__label" for="txtPassword">Mot de passe *</label>
+          <input class="form__input" type="password" id="pwPassword" />
+          <div class="errors"></div>
+        </div>
+        <div class="form__fields" id="fieldConfirmPassword">
+          <label class="form__label" for="txtConfirmPassword">
+            Confirmer le mot de passe *
+          </label>
+          <input class="form__input" type="password" id="pwConfirmPassword" />
+          <div class="errors"></div>
+        </div>
+        <input
+          class="form__submit"
+          type="submit"
+          value="S'enregistrer"
+          id="btnConnect"
+        />
+        <div class="errors"></div>
+      </form>
+    </main>
+  </body>
+</html>

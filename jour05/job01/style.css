@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.1rem;
+}
+
+.navbar {
+  padding-inline: 3rem;
+  background-color: hsl(150, 69%, 31%);
+}
+
+.navbar__list-item {
+  min-height: 75px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+}
+
+.item--brand {
+  margin-right: auto;
+}
+
+.navbar__brand {
+  color: hsl(0, 0%, 100%);
+}
+
+.navbar__link {
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  padding: 1rem 2rem;
+}
+
+.app-form {
+  display: flex;
+  gap: 0.25em;
+  flex-direction: column;
+  width: fit-content;
+  margin: 4em auto;
+  padding: 4em;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 10px 2px hsla(0, 0%, 0%, 50%);
+}
+
+.form--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'lastname firstname'
+    'email email'
+    'address zipcode'
+    'password cpassword'
+    'submit submit'
+    'errors errors';
+}
+
+.form__fields {
+  display: flex;
+  flex-direction: column;
+}
+
+#fieldLastname {
+  grid-area: lastname;
+}
+
+#fieldFirstname {
+  grid-area: firstname;
+}
+
+#fieldEmail {
+  grid-area: email;
+}
+
+#fieldAddress {
+  grid-area: address;
+}
+
+#fieldZipCode {
+  grid-area: zipcode;
+}
+
+#fieldPassword {
+  grid-area: password;
+}
+
+#fieldConfirmPassword {
+  grid-area: cpassword;
+}
+
+#btnSubmit {
+  grid-area: submit;
+}
+
+.form--grid > input[type='submit'] {
+  grid-area: errors;
+}
+
+.form__input {
+  border: 1px solid gray;
+  border-radius: 0.15rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.form__submit {
+  font-size: 1.1rem;
+  width: fit-content;
+  padding: 0.5rem 0.75rem;
+  margin-top: 1rem;
+  margin-inline: auto;
+  background: transparent;
+  border: 2px solid hsl(150, 69%, 31%);
+  border-radius: 0.15rem;
+  background-color: hsl(0, 0%, 100%);
+  transition: 150ms;
+}
+
+.form__submit:hover,
+.form__submit:focus {
+  background-color: hsl(150, 69%, 31%);
+  color: white;
+}
+
+.form__submit:hover {
+  cursor: pointer;
+}
+
+.form__submit:active {
+  background-color: hsl(150, 69%, 30%);
+  border: 2px solid hsl(150, 69%, 30%);
+}

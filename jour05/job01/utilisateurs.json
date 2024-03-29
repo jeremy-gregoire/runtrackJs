@@ -1,0 +1,10 @@
+[
+  {
+    "lastname": "Pouf",
+    "firstname": "Mister",
+    "email": "mister.pouf@example.com",
+    "address": "5 rue des Raviolis",
+    "zipCode": "245781",
+    "password": "123456789"
+  }
+]
