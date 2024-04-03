@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <title>Runtrack JS - Jour 07 - Job 03</title>
+
+    <!-- MATERIALIZE -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="container nav-wrapper">
+        <a href="#" class="brand-logo">Saussure</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Inscription</a></li>
+          <li><a href="#">Connexion</a></li>
+          <li><a href="#">Rechercher</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <section>
+        <h1 class="center-align">Créer un compte</h1>
+
+        <form method="post" action="#">
+          <section>
+            <label for="txtLastname">Nom de famille</label>
+            <input type="text" id="txtLastname" />
+          </section>
+
+          <section>
+            <label for="txtFirstname">Prénom</label>
+            <input type="text" id="txtFirstname" />
+          </section>
+
+          <section>
+            <label for="txtAddress">Adresse</label>
+            <input type="text" id="txtAddress" />
+          </section>
+
+          <section>
+            <label for="txtEmail">Email</label>
+            <input type="email" id="txtEmail" />
+          </section>
+
+          <section>
+            <label for="txtPassword">Mot de passe</label>
+            <input type="password" id="txtPassword" />
+          </section>
+
+          <section>
+            <label for="txtConfirmPassword">Confirmer le mot de passe</label>
+            <input type="password" id="txtConfirmPassword" />
+          </section>
+
+          <section>
+            <p>Civilité</p>
+            <p>
+              <label for="rdMister">
+                <input name="civility" id="rdMister" type="radio" checked />
+                <span>Monsieur</span>
+              </label>
+            </p>
+
+            <p>
+              <label for="rdMadam">
+                <input name="civility" id="rdMadam" type="radio" />
+                <span>Madame</span>
+              </label>
+            </p>
+
+            <p>
+              <label for="rdOther">
+                <input name="civility" id="rdOther" type="radio" />
+                <span>Autre</span>
+              </label>
+            </p>
+          </section>
+
+          <section>
+            <p>Passions</p>
+            <p>
+              <label for="ckComputerScience">
+                <input type="checkbox" id="ckComputerScience" />
+                <span>Informatique</span>
+              </label>
+            </p>
+            <p>
+              <label for="ckTravel">
+                <input type="checkbox" id="ckTravel" />
+                <span>Voyages</span>
+              </label>
+            </p>
+            <p>
+              <label for="ckSport">
+                <input type="checkbox" id="ckSport" />
+                <span>Sport</span><!DOCTYPE html>
+              </label>
+            </p>
+            <p>
+              <label for="ckReading">
+                <input type="checkbox" id="ckReading" />
+                <span>Lecture</span>
+              </label>
+            </p>
+          </section>
+
+          <section>
+            <input type="submit" value="Créer" />
+          </section>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">À propos</h5>
+            <p class="grey-text text-lighten-4">
+              Saussure Inc. apporte une touche de créativité à chaque pas que
+              vous faites. Nos chaussettes uniques et audacieuses sont conçues
+              pour égayer votre journée et exprimer votre style personnel.
+              Transformez chaque pas en une déclaration de mode avec Saussure
+              Inc.!
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Liens</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Accueil</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Inscription</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Connexion</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Rechercher</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2024 Saussure Inc.
+          <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
