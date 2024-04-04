@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <title>Runtrack JS - Jour 08 - Job 04</title>
+
+    <!-- TAILWINDCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="bg-indigo-600">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 md:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <button
+                type="button"
+                class="relative inline-flex items-center justify-center rounded-md p-2 hover:bg-indigo-800 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Ouvrir le menu principal</span>
+                <svg
+                  class="block h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+                <svg
+                  class="hidden h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+            >
+              <div class="flex flex-shrink-0 items-center">
+                <img
+                  class="h-8 w-auto"
+                  src="https://img.logoipsum.com/220.svg"
+                  alt="Lorem Ipsum"
+                />
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="hover:bg-indigo-800 text-white rounded-md px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                    aria-current="page"
+                  >
+                    Accueil
+                  </a>
+                  <a
+                    href="#"
+                    class="hover:bg-indigo-800 text-white rounded-md px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  >
+                    Inscription
+                  </a>
+                  <a
+                    href="#"
+                    class="hover:bg-indigo-800 text-white rounded-md px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  >
+                    Connexion
+                  </a>
+                  <a
+                    href="#"
+                    class="hover:bg-indigo-800 text-white rounded-md px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  >
+                    Rechercher
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            ></div>
+          </div>
+        </div>
+
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <a
+              href="#"
+              class="text-center hover:bg-indigo-800 text-white block rounded-md px-3 py-2 text-base font-medium focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-current="page"
+            >
+              Accueil
+            </a>
+            <a
+              href="#"
+              class="text-center hover:bg-indigo-800 text-white block rounded-md px-3 py-2 text-base font-medium focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            >
+              Inscription
+            </a>
+            <a
+              href="#"
+              class="text-center hover:bg-indigo-800 text-white block rounded-md px-3 py-2 text-base font-medium focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            >
+              Connexion
+            </a>
+            <a
+              href="#"
+              class="text-center hover:bg-indigo-800 text-white block rounded-md px-3 py-2 text-base font-medium focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            >
+              Rechercher
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <form
+          class="flex flex-col gap-4 px-4 py-12 md:px-32 lg:px-54 xl:px-96"
+          method="post"
+          action="#"
+        >
+          <section class="flex flex-col">
+            <label for="txtFirstname">Prénom</label>
+            <input type="text" id="txtFirstname" />
+
+            <label for="txtLastname">Nom de famille</label>
+            <input type="text" id="txtLastname" />
+
+            <label for="txtAddress">Adresse</label>
+            <input type="text" id="txtAddress" />
+          </section>
+
+          <section class="flex flex-col">
+            <label for="txtEmail">Email</label>
+            <input type="email" id="txtEmail" />
+
+            <label for="pwPassword">Mot de passe</label>
+            <input type="password" id="pwPassword" />
+
+            <label for="pwConfirmPassword">Confirmer le mot de passe</label>
+            <input type="password" id="pwConfirmPassword" />
+          </section>
+
+          <section class="flex flex-col gap-2">
+            <p class="font-bold">Civilité</p>
+
+            <label for="rdMister">
+              <input class="mx-2" type="radio" id="rdMister" />
+              <span>Monsieur</span>
+            </label>
+
+            <label for="rdMadam">
+              <input class="mx-2" type="radio" id="rdMadam" />
+              <span>Madame</span>
+            </label>
+          </section>
+
+          <section class="flex flex-col gap-2">
+            <p class="font-bold">Passions</p>
+
+            <label for="ckComputerScience">
+              <input class="mx-2" type="checkbox" id="ckComputerScience" />
+              Informatique
+            </label>
+
+            <label for="ckTravel">
+              <input class="mx-2" type="checkbox" id="ckTravel" />
+              Voyages
+            </label>
+
+            <label for="ckSport">
+              <input class="mx-2" type="checkbox" id="ckSport" />
+              Sport
+            </label>
+
+            <label for="ckReading">
+              <input class="mx-2" type="checkbox" id="ckReading" />
+              Lecture
+            </label>
+          </section>
+
+          <section class="flex">
+            <input
+              class="w-full md:w-1/6 bg-indigo-600 hover:bg-indigo-800 active:bg-indigo-700 text-white p-4 rounded-md"
+              type="submit"
+              value="Valider"
+            />
+          </section>
+        </form>
+      </section>
+    </main>
+    <footer class="bg-indigo-600 p-10 md:p-28 text-white">
+      <section
+        class="flex flex-col md:items-center w-full md:flex-row gap-14 container mx-auto flex"
+      >
+        <section class="flex flex-col gap-4 md:w-2/4">
+          <img
+            class="flex items-center h-20 md:h-28 w-full"
+            src="https://img.logoipsum.com/220.svg"
+            alt="Lorem Ipsum"
+          />
+          <p class="text-justify md:text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur error sit repellendus ipsa assumenda labore alias eum
+            culpa deleniti praesentium.
+          </p>
+        </section>
+        <section class="flex items-start flex-col sm:flex-row gap-10">
+          <nav class="flex flex-col gap-4 w-full">
+            <h1 class="text-3xl text-center md:text-left font-bold">Liens</h1>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="index.html">Inscription</a></li>
+              <li><a href="index.html">Connexion</a></li>
+              <li><a href="index.html">Rechercher</a></li>
+            </ul>
+          </nav>
+        </section>
+      </section>
+    </footer>
+  </body>
+</html>
