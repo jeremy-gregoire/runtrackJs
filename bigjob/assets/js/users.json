@@ -1,0 +1,112 @@
+[
+  {
+    "userId": 1,
+    "firstName": "Élise",
+    "lastName": "Dubois",
+    "email": "elise.dubois@laplateforme.io",
+    "password": "motdepasse1",
+    "registeredAt": "2024-03-31 12:00:00",
+    "connectedAt": "2024-03-31 18:45:23",
+    "isConnected": false,
+    "roles": [{ "value": "student", "label": "Étudiant" }]
+  },
+  {
+    "userId": 2,
+    "firstName": "Juliette",
+    "lastName": "Lefèvre",
+    "email": "juliette.lefevre@laplateforme.io",
+    "password": "123456",
+    "registeredAt": "2024-03-31 13:30:00",
+    "connectedAt": "2024-03-31 20:15:10",
+    "isConnected": false,
+    "roles": [{ "value": "student", "label": "Étudiant" }]
+  },
+  {
+    "userId": 3,
+    "firstName": "Camille",
+    "lastName": "Leroy",
+    "email": "camille.leroy@laplateforme.io",
+    "password": "pass123",
+    "registeredAt": "2024-03-31 14:45:00",
+    "connectedAt": "2024-03-31 19:55:37",
+    "isConnected": false,
+    "roles": [{ "value": "student", "label": "Étudiant" }]
+  },
+  {
+    "userId": 4,
+    "firstName": "Éléna",
+    "lastName": "Girard",
+    "email": "elena.girard@laplateforme.io",
+    "password": "p@ssw0rd",
+    "registeredAt": "2024-03-31 16:00:00",
+    "connectedAt": "2024-03-31 21:10:55",
+    "isConnected": false,
+    "roles": [{ "value": "student", "label": "Étudiant" }]
+  },
+  {
+    "userId": 5,
+    "firstName": "Manon",
+    "lastName": "Roy",
+    "email": "manon.roy@laplateforme.io",
+    "password": "letmein",
+    "registeredAt": "2024-03-31 17:20:00",
+    "connectedAt": "2024-03-31 22:30:42",
+    "isConnected": false,
+    "roles": [{ "value": "student", "label": "Étudiant" }]
+  },
+  {
+    "userId": 6,
+    "firstName": "Chloé",
+    "lastName": "Thomas",
+    "email": "chloe.thomas@laplateforme.io",
+    "password": "securepwd",
+    "registeredAt": "2024-03-31 18:40:00",
+    "connectedAt": "2024-03-31 23:45:18",
+    "isConnected": false,
+    "roles": [{ "value": "student", "label": "Étudiant" }]
+  },
+  {
+    "userId": 7,
+    "firstName": "Lucas",
+    "lastName": "Martin",
+    "email": "lucas.martin@laplateforme.io",
+    "password": "password2",
+    "registeredAt": "2024-03-31 10:30:00",
+    "connectedAt": "2024-03-31 17:20:05",
+    "isConnected": false,
+    "roles": [{ "value": "moderator", "label": "Modérateur" }]
+  },
+  {
+    "userId": 8,
+    "firstName": "Antoine",
+    "lastName": "Dupont",
+    "email": "antoine.dupont@laplateforme.io",
+    "password": "qwerty",
+    "registeredAt": "2024-03-31 11:45:00",
+    "connectedAt": "2024-03-31 19:10:30",
+    "isConnected": false,
+    "roles": [{ "value": "admin", "label": "Administrateur" }]
+  },
+  {
+    "userId": 9,
+    "firstName": "Sophie",
+    "lastName": "Garcia",
+    "email": "sophie.garcia@laplateforme.io",
+    "password": "password123",
+    "registeredAt": "2024-03-31 09:15:00",
+    "connectedAt": "2024-03-31 16:35:12",
+    "isConnected": false,
+    "roles": [{ "value": "student", "label": "Étudiant" }]
+  },
+  {
+    "userId": 10,
+    "firstName": "Maxime",
+    "lastName": "Martel",
+    "email": "maxime.martel@laplateforme.io",
+    "password": "maxpwd",
+    "registeredAt": "2024-03-31 07:50:00",
+    "connectedAt": "2024-03-31 14:25:48",
+    "isConnected": false,
+    "roles": [{ "value": "student", "label": "Étudiant" }]
+  }
+]
