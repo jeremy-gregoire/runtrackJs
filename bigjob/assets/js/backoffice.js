@@ -1,22 +1,5 @@
 const elemTableBody = document.querySelector('#table-body');
 
-async function getUsers() {
-  try {
-    const response = await fetch('../js/users.json');
-
-    if (!response.ok || response.status !== 200) {
-      console.error(
-        `[${response.status}] Impossible to fetch users at '${response.url}'`
-      );
-      return undefined;
-    }
-
-    return await response.json();
-  } catch (error) {
-    throw error;
-  }
-}
-
 function createRow(
   userId,
   userFirstname,

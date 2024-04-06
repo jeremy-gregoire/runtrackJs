@@ -22,6 +22,11 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- JAVASCRIPT -->
+    <script src="../js/utilities/requests.js" defer></script>
+    <script src="../js/utilities/utility.js" defer></script>
+    <script src="../js/connexion.js" defer></script>
   </head>
   <body>
     <header>
@@ -39,10 +44,7 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNavDropdown"
-          >
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="connexion.html">Connexion</a>
@@ -75,33 +77,19 @@
       </nav>
     </header>
     <main>
-      <section
-        class="container my-4 p-4 bg-light border border-rounded rounded"
-      >
+      <section class="container my-4 p-4 bg-light border border-rounded rounded">
         <h1 class="text-center p-4">Connexion</h1>
-        <form>
+        <form id="formConnexion">
           <div class="mb-3">
             <label for="txtEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="txtEmail" />
+            <input type="email" class="form-control" id="txtEmail" required />
           </div>
           <div class="mb-3">
             <label for="txtPassword" class="form-label">Mot de passe</label>
-            <input type="password" class="form-control" id="txtPassword" />
+            <input type="password" class="form-control" id="txtPassword" required />
           </div>
-          <div class="mb-3 form-check">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              id="ckStayConnected"
-            />
-            <label class="form-check-label" for="ckStayConnected">
-              Rester connecté
-            </label>
-          </div>
-          <div
-            class="d-flex flex-column flex-md-row align-items-md-center gap-2"
-          >
-            <button type="submit" class="btn btn-primary">Se connecter</button>
+          <div class="d-flex flex-column flex-md-row align-items-md-center gap-2">
+            <input type="submit" class="btn btn-primary" id="btnConnect" value="Se connecter" />
             <a
               class="icon-link icon-link-hover"
               style="--bs-link-hover-color-rgb: 237, 140, 28"
@@ -131,9 +119,7 @@
         class="container border-top py-3 my-4 d-flex flex-sm-row flex-wrap justify-content-between align-items-center"
       >
         <div class="col-md-4 d-flex align-items-center">
-          <span class="mb-3 mb-md-0 text-body-secondary">
-            &copy; 2024 BigJob, Inc
-          </span>
+          <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2024 BigJob, Inc</span>
         </div>
       </div>
     </footer>
