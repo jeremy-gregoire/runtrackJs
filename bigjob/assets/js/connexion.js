@@ -42,7 +42,6 @@ function onClick_elemBtnConnect(e) {
       window.localStorage.setItem('userEmail', user.email);
       window.localStorage.setItem('userRoleValue', user.role.value);
       window.localStorage.setItem('userRoleLabel', user.role.label);
-
       redirect('assets/pages/calendrier.html');
     } else {
       showMessage(elemFormConnexion, 'error', "L'email ou le mot de passe est/sont incorrect(s)");
@@ -54,10 +53,8 @@ window.addEventListener('load', () => {
   if (window.localStorage.getItem('userAlreadyConnected') === 'true') {
     redirect('assets/pages/calendrier.html');
   } else {
-    if (elemBtnConnect) {
+    checkVariablesElement(() => {
       elemBtnConnect.addEventListener('click', onClick_elemBtnConnect);
-    } else {
-      console.error("'elemBtnConnect' is NULL!");
-    }
+    }, elemBtnConnect);
   }
 });

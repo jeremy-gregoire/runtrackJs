@@ -50,29 +50,29 @@
     <main>
       <section class="container my-4 p-4 bg-light border border-rounded rounded">
         <h1 class="text-center p-4">Inscription</h1>
-        <form>
+        <form id="formRegister">
           <div class="row mb-3 gap-2">
-            <div class="col-md">
+            <div id="firstnameInputContainer" class="col-md">
               <label for="txtFirstname" class="form-label">Prénom</label>
               <input type="text" class="form-control" id="txtFirstname" required />
             </div>
-            <div class="col-md">
+            <div id="lastnameInputContainer" class="col-md">
               <label for="txtLastname" class="form-label">Nom de famille</label>
               <input type="text" class="form-control" id="txtLastname" required />
             </div>
           </div>
           <div class="row mb-3 gap-2">
-            <div class="col">
+            <div id="emailInputContainer" class="col">
               <label for="txtEmail" class="form-label">Email</label>
               <input type="email" class="form-control" id="txtEmail" required />
             </div>
           </div>
           <div class="row mb-3 gap-2">
-            <div class="col-md">
+            <div id="passwordInputContainer" class="col-md">
               <label for="txtPassword" class="form-label">Mot de passe</label>
               <input type="password" class="form-control" id="txtPassword" required />
             </div>
-            <div class="col-md">
+            <div id="confirmPasswordInputContainer" class="col-md">
               <label for="txtConfirmPassword" class="form-label">
                 Mot de passe de confirmation
               </label>

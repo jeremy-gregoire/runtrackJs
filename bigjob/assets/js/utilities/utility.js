@@ -45,9 +45,14 @@ function redirect(url) {
   window.location.replace(window.location.origin + '/bigjob/' + url);
 }
 
+/**
+ * Runs an action when each HTML Element aren't null.
+ * @param {callback} callback Callback function to call when all HTML Elements success the check.
+ * @param  {...HTMLElement} elements HTML Elements to check.
+ */
 function checkVariablesElement(callback, ...elements) {
   if (elements.some((element) => !element)) {
-    console.error('One or many element(s) is/are NULL!');
+    console.error('One or many HTMLElement is/are NULL!');
     return;
   }
 

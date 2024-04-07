@@ -57,46 +57,50 @@ function createRow(
   return elemTemplate.content.firstElementChild;
 }
 
-if (elemTableBody && elemDropdownUser && elemDropdownUserItems && elemBtnDisconnect) {
-  elemDropdownUser.textContent = window.localStorage.getItem('userEmail');
-  elemBtnDisconnect.addEventListener('click', () => {
-    window.localStorage.clear();
-    redirect('assets/pages/connexion.html');
-  });
+window.addEventListener('load', () => {
+  checkVariablesElement(
+    () => {
+      elemDropdownUser.textContent = window.localStorage.getItem('userEmail');
+      elemBtnDisconnect.addEventListener('click', () => {
+        window.localStorage.clear();
+        redirect('assets/pages/connexion.html');
+      });
 
-  if (
-    window.localStorage.getItem('userRoleValue') === 'moderator' ||
-    window.localStorage.getItem('userRoleValue') === 'admin'
-  ) {
-    createQuickHTMLElement(
-      'template',
-      elemDropdownUserItems,
-      {
-        innerHTML:
-          '<li><a class="dropdown-item" href="./backoffice.html">Panel administrateur</a></li>',
-      },
-      -1
-    );
-  }
+      if (
+        window.localStorage.getItem('userRoleValue') === 'moderator' ||
+        window.localStorage.getItem('userRoleValue') === 'admin'
+      ) {
+        createQuickHTMLElement(
+          'template',
+          elemDropdownUserItems,
+          {
+            innerHTML:
+              '<li><a class="dropdown-item" href="./backoffice.html">Panel administrateur</a></li>',
+          },
+          -1
+        );
+      }
 
-  getUsers().then((users) => {
-    users.forEach((user) => {
-      elemTableBody.appendChild(
-        createRow(
-          user.userId,
-          user.firstName,
-          user.lastName,
-          user.email,
-          user.registeredAt,
-          user.connectedAt,
-          user.isConnected,
-          user.role
-        )
-      );
-    });
-  });
-} else {
-  console.error(
-    "'elemTableBody', 'elemDropdownUser', 'elemDropdownUserItems' or 'elemBtnDisconnect' is/are NULL!"
+      getUsers().then((users) => {
+        users.forEach((user) => {
+          elemTableBody.appendChild(
+            createRow(
+              user.userId,
+              user.firstName,
+              user.lastName,
+              user.email,
+              user.registeredAt,
+              user.connectedAt,
+              user.isConnected,
+              user.role
+            )
+          );
+        });
+      });
+    },
+    elemTableBody,
+    elemDropdownUser,
+    elemDropdownUserItems,
+    elemBtnDisconnect
   );
-}
+});
