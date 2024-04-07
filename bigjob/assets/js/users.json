@@ -8,7 +8,7 @@
     "registeredAt": "2024-03-31 12:00:00",
     "connectedAt": "2024-03-31 18:45:23",
     "isConnected": false,
-    "roles": [{ "value": "student", "label": "Étudiant" }]
+    "role": { "value": "student", "label": "Étudiant" }
   },
   {
     "userId": 2,
@@ -19,7 +19,7 @@
     "registeredAt": "2024-03-31 13:30:00",
     "connectedAt": "2024-03-31 20:15:10",
     "isConnected": false,
-    "roles": [{ "value": "student", "label": "Étudiant" }]
+    "role": { "value": "student", "label": "Étudiant" }
   },
   {
     "userId": 3,
@@ -30,7 +30,7 @@
     "registeredAt": "2024-03-31 14:45:00",
     "connectedAt": "2024-03-31 19:55:37",
     "isConnected": false,
-    "roles": [{ "value": "student", "label": "Étudiant" }]
+    "role": { "value": "student", "label": "Étudiant" }
   },
   {
     "userId": 4,
@@ -41,7 +41,7 @@
     "registeredAt": "2024-03-31 16:00:00",
     "connectedAt": "2024-03-31 21:10:55",
     "isConnected": false,
-    "roles": [{ "value": "student", "label": "Étudiant" }]
+    "role": { "value": "student", "label": "Étudiant" }
   },
   {
     "userId": 5,
@@ -52,7 +52,7 @@
     "registeredAt": "2024-03-31 17:20:00",
     "connectedAt": "2024-03-31 22:30:42",
     "isConnected": false,
-    "roles": [{ "value": "student", "label": "Étudiant" }]
+    "role": { "value": "student", "label": "Étudiant" }
   },
   {
     "userId": 6,
@@ -63,7 +63,7 @@
     "registeredAt": "2024-03-31 18:40:00",
     "connectedAt": "2024-03-31 23:45:18",
     "isConnected": false,
-    "roles": [{ "value": "student", "label": "Étudiant" }]
+    "role": { "value": "student", "label": "Étudiant" }
   },
   {
     "userId": 7,
@@ -74,7 +74,7 @@
     "registeredAt": "2024-03-31 10:30:00",
     "connectedAt": "2024-03-31 17:20:05",
     "isConnected": false,
-    "roles": [{ "value": "moderator", "label": "Modérateur" }]
+    "role": { "value": "moderator", "label": "Modérateur" }
   },
   {
     "userId": 8,
@@ -85,7 +85,7 @@
     "registeredAt": "2024-03-31 11:45:00",
     "connectedAt": "2024-03-31 19:10:30",
     "isConnected": false,
-    "roles": [{ "value": "admin", "label": "Administrateur" }]
+    "role": { "value": "admin", "label": "Administrateur" }
   },
   {
     "userId": 9,
@@ -96,7 +96,7 @@
     "registeredAt": "2024-03-31 09:15:00",
     "connectedAt": "2024-03-31 16:35:12",
     "isConnected": false,
-    "roles": [{ "value": "student", "label": "Étudiant" }]
+    "role": { "value": "student", "label": "Étudiant" }
   },
   {
     "userId": 10,
@@ -107,6 +107,6 @@
     "registeredAt": "2024-03-31 07:50:00",
     "connectedAt": "2024-03-31 14:25:48",
     "isConnected": false,
-    "roles": [{ "value": "student", "label": "Étudiant" }]
+    "role": { "value": "student", "label": "Étudiant" }
   }
 ]

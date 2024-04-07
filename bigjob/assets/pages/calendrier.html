@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="#" type="image/x-icon" />
-    <title>BigJob - Connexion</title>
+    <title>BigJob - Calendrier</title>
 
     <!-- BOOTSTRAP -->
     <link
@@ -26,6 +26,7 @@
     <!-- JAVASCRIPT -->
     <script src="../js/utilities/requests.js" defer></script>
     <script src="../js/utilities/utility.js" defer></script>
+    <script src="../js/calendrier.js" defer></script>
   </head>
   <body>
     <header>
@@ -47,6 +48,7 @@
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <a
+                  id="dropdown-user"
                   class="nav-link dropdown-toggle"
                   href="#"
                   role="button"
@@ -55,12 +57,12 @@
                 >
                   Nom d'utilisateur
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="./backoffice.html">Administrateur</a></li>
+                <ul id="dropdown-user-items" class="dropdown-menu dropdown-menu-end">
+                  
                   <li><a class="dropdown-item" href="#">Calendrier</a></li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item" href="#">Déconnexion</a>
+                    <a id="btnDisconnect" class="dropdown-item" href="#">Déconnexion</a>
                   </li>
                 </ul>
               </li>

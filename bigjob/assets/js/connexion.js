@@ -3,6 +3,8 @@ const elemTxtEmail = document.querySelector('#txtEmail');
 const elemTxtPassword = document.querySelector('#txtPassword');
 const elemBtnConnect = document.querySelector('#btnConnect');
 
+let user = undefined;
+
 /**
  * @param {SubmitEvent} e
  */
@@ -31,18 +33,31 @@ function onClick_elemBtnConnect(e) {
 
   getUsers().then((data) => {
     const match = data.filter((user) => user.email === email && user.password === password);
-    const user = match.length === 0 ? undefined : match[0];
+    user = match.length === 0 ? undefined : match[0];
 
     if (user) {
-      showMessage(elemFormConnexion, 'success', 'Vous vous êtes parfaitement connecté !');
+      window.localStorage.setItem('userAlreadyConnected', true);
+      window.localStorage.setItem('userFirstname', user.firstName);
+      window.localStorage.setItem('userLastname', user.lastName);
+      window.localStorage.setItem('userEmail', user.email);
+      window.localStorage.setItem('userRoleValue', user.role.value);
+      window.localStorage.setItem('userRoleLabel', user.role.label);
+
+      redirect('assets/pages/calendrier.html');
     } else {
       showMessage(elemFormConnexion, 'error', "L'email ou le mot de passe est/sont incorrect(s)");
     }
   });
 }
 
-if (elemBtnConnect) {
-  elemBtnConnect.addEventListener('click', onClick_elemBtnConnect);
-} else {
-  console.error("'elemBtnConnect' is NULL!");
-}
+window.addEventListener('load', () => {
+  if (window.localStorage.getItem('userAlreadyConnected') === 'true') {
+    redirect('assets/pages/calendrier.html');
+  } else {
+    if (elemBtnConnect) {
+      elemBtnConnect.addEventListener('click', onClick_elemBtnConnect);
+    } else {
+      console.error("'elemBtnConnect' is NULL!");
+    }
+  }
+});

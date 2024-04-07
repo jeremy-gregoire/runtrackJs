@@ -1,4 +1,7 @@
 const elemTableBody = document.querySelector('#table-body');
+const elemDropdownUser = document.querySelector('#dropdown-user');
+const elemDropdownUserItems = document.querySelector('#dropdown-user-items');
+const elemBtnDisconnect = document.querySelector('#btnDisconnect');
 
 function createRow(
   userId,
@@ -8,11 +11,9 @@ function createRow(
   userRegistrationDate,
   userLastConnection,
   userIsConnected,
-  userRoles
+  userRole
 ) {
   const elemTemplate = document.createElement('template');
-  const rolesRow = userRoles.map((role) => role.label).join(', ');
-  const roles = userRoles.map((role) => role.value);
 
   elemTemplate.innerHTML = `
     <tr>
@@ -23,12 +24,12 @@ function createRow(
       <td>${userRegistrationDate}</td>
       <td>${userLastConnection}</td>
       <td>${userIsConnected ? 'Oui' : 'Non'}</td>
-      <td>${rolesRow}</td>
+      <td>${userRole.label}</td>
       <td class="d-flex justify-content-end gap-2">
         ${
-          roles.includes('admin')
+          userRole.value === 'admin'
             ? '<div class="h-100">&nbsp;</div>'
-            : roles.includes('moderator')
+            : userRole.value === 'moderator'
             ? `
             <button class="btn btn-danger" title="Révoquer les droits">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eraser" viewBox="0 0 16 16">
@@ -40,14 +41,14 @@ function createRow(
                 <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5"/>
               </svg>
             </button>
-            `.trim()
+            `
             : `
             <button class="btn btn-danger ml-auto" title="Faire passer en Modérateur">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
                 <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
                 <path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
               </svg>
-            </button>`.trim()
+            </button>`
         }
       </td>
     </tr>
@@ -56,7 +57,28 @@ function createRow(
   return elemTemplate.content.firstElementChild;
 }
 
-if (elemTableBody) {
+if (elemTableBody && elemDropdownUser && elemDropdownUserItems && elemBtnDisconnect) {
+  elemDropdownUser.textContent = window.localStorage.getItem('userEmail');
+  elemBtnDisconnect.addEventListener('click', () => {
+    window.localStorage.clear();
+    redirect('assets/pages/connexion.html');
+  });
+
+  if (
+    window.localStorage.getItem('userRoleValue') === 'moderator' ||
+    window.localStorage.getItem('userRoleValue') === 'admin'
+  ) {
+    createQuickHTMLElement(
+      'template',
+      elemDropdownUserItems,
+      {
+        innerHTML:
+          '<li><a class="dropdown-item" href="./backoffice.html">Panel administrateur</a></li>',
+      },
+      -1
+    );
+  }
+
   getUsers().then((users) => {
     users.forEach((user) => {
       elemTableBody.appendChild(
@@ -68,11 +90,13 @@ if (elemTableBody) {
           user.registeredAt,
           user.connectedAt,
           user.isConnected,
-          user.roles
+          user.role
         )
       );
     });
   });
 } else {
-  console.error("'elemTableBody' is undefined!");
+  console.error(
+    "'elemTableBody', 'elemDropdownUser', 'elemDropdownUserItems' or 'elemBtnDisconnect' is/are NULL!"
+  );
 }
